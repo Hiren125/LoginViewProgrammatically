@@ -55,9 +55,15 @@ class LoginUIView: UIView {
     
     private func buttonConstraintsInit() {
         NSLayoutConstraint.activate([
-            loginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+           loginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             loginButton.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: -5)
         ])
+
+        //we can also use below line
+     //   NSLayoutConstraint(item: loginButton, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0).isActive = true
+
+        //or we can use anchors
+//        loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
 
     private func passwordConstraintsInit() {
